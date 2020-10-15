@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Vacation Time</title>
+    <title>Responsive Web Design Task: Task</title>
     <link rel="stylesheet" href="../styles.css"/>
     <style>
       * {
@@ -18,7 +18,7 @@
       }
 
       header {
-        background-color: #333;
+        background-image: url("sea.jpg");
         color: #fff;
         border: 5px solid #000;
       }
@@ -28,6 +28,11 @@
 		width: 100px;
 		height: 100px;
 		background: #555;
+		}
+		
+		.qrcode {
+		width: 25%;
+		height: 25%;
 		}
 
       header ul {
@@ -39,6 +44,9 @@
       header a {
         color: #fff;
         text-decoration: none;
+		background-color: rgba(0, 255, 255, 0.3);
+		color: black;
+		font-weight: bold;
         display: block;
         padding: 0.5em 1em;
         border-top: 1px solid #999;
@@ -47,10 +55,13 @@
       header .title {
 		position: relative;
 		margin-left: 50%;
+		background-color: rgba(0, 255, 255, 0.3);
         font-size: 150%;
         font-style: italic;
+		text-shadow: 3px 3px 6px white;
         font-weight: bold;
         padding: 10px;
+		color: black;
       }
 
       main {
@@ -69,8 +80,8 @@
       }
 
       .cards h2 {
-        background-color: #333;
-        color: #fff;
+        background-color: #00cccc;
+        color: black;
         margin: 0;
         padding: 0.5em 1em;
       }
@@ -78,12 +89,36 @@
       .cards .inner {
         padding: 0.5em 1em;
       }
+	  
+	  img {
+	  width: 100%;
+	  height: 75%;
+	  }
+	  
+	  .container {
+	   position: relative;
+	   overflow: hidden;
+	   width: 100%;
+	   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+	  }
 
+
+	  .responsive-iframe {
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+	   bottom: 0;
+	   right: 0;
+	   width: 100%;
+	   height: 100%;
+	  }
+	  
+		
       .sidebar {
-        background-color: #333;
         border: 5px solid #000;
         padding: 0.5em 1em;
-        color: #fff;
+        color: black;
+		background-color: #00cccc;
       }
 	  
 	  
@@ -95,20 +130,25 @@
 		}
 		
 		header .title {
-        font-size: 130%;
+        font-size: 150%;
 		position: relative;
-		margin-left: 0%;
+		background-color: rgba(0, 255, 255, 0.1);
+		margin-left: 20%;
 		padding: 1em;
 		}
 		
 		header img {
-		float: right;
+		float: left;
+		margin-left: 20px;
 		width: 130px;
 		height: 130px;
 		}
 		
 		header a{
 		border-top: none;
+		background-color: #000066;
+		color: white;
+		margin-left: 20px;
 		}
 		
         nav ul {
@@ -127,6 +167,11 @@
         color: #fff;
 		}
 		
+		.sidebar {
+        background-color: #000066;
+        color: white;
+      }
+		
 }
 
 @media screen and (min-width: 70em) {
@@ -140,34 +185,26 @@
         }
 			
 		header .title {
-		position: fixed;
+		position: relative;
 		font-size: 150%;
+		margin-left: 0%;
+		background-color: rgba(0, 255, 255, 0.3);
 		}
 		
 		header img {
 		margin-left: 200px;
 		width: 100px;
 		height: 100px;
-		background: #555;
+		background: #555;		
 		}
-		
-		
-		
-		nav ul {
-		float: right;
-		width: 100%;
-		margin-left: 150px;
-		padding-left: 400px;
-		
-		}
-		
+				
 		header a{
 		height: 100px;
-		position: relative;
+		background-color: rgba(0, 255, 255, 0.3);
 		text-decoration: none;
-		float: right;
+		color: black;
 		border-top: none;
-		padding-top: 30px;
+		padding-top: 30px;		
 		}
 			
 		article {
@@ -185,17 +222,18 @@
 		}
 		
 		.cards h2 {
-        background-color: #333;
-        color: #fff;
+        background-color: #00cccc;
+        color: black;
 		}
 	
 		.sidebar {	
-		height: 900px;
+		height: 980px;
 		width: 25%;
 		float: left;
 		padding-bottom: 65%;
 		margin-top: 20px;
 		box-sizing: border-box;
+		background-color: #00cccc;
 		}
 		
 }
@@ -205,7 +243,9 @@
 
   <body>
     <header>
+	<div class="qrcode">
 	<img src="qrcode.png" alt="qrcode" width="100" height="100" >
+	</div>
       <div class="title">Vacation Time</div>
 	        <nav>
         <ul>
@@ -225,42 +265,33 @@
 
     <main>
       <article>
-        <h1>This is the main heading</h1>
-        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+        <h1>Enjoy Nature in Luxury</h1>
+        <p>Vacation Time offers a special lodging experience on the California North Coast with panoramic views of the Pacific Ocean. Your stay at Pacific Trails Resort includes a sumptuously appointed private yurt and a cooked-to-order breakfast each morning.</p>
 
-        <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
-
-        <ul class="cards">
+		<div class="container">
+       <iframe class="responsive-iframe" src="https://www.youtube.com/embed/9GvTYd5hG_g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<br><br>
+		<ul class="cards">
           <li>
-            <h2>Card One</h2>
+            <h2>Image 1</h2>
             <div class="inner">
-              <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado.</p>
+              <img src="vacation1.jpg" width="200" height="150" alt="Vacation 1">
             </div>
           </li>
           <li>
-            <h2>Card Two</h2>
+            <h2>Image 2</h2>
             <div class="inner">
-              <p>Daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+              <img src="vacation2.jpg" width="200" height="150" alt="Vacation 1">
             </div>
           </li>
           <li>
-            <h2>Card Three</h2>
+            <h2>Image 3</h2>
             <div class="inner">
-              <p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
+              <img src="vacation3.jpg" width="200" height="150" alt="Vacation 1">
             </div>
           </li>
-          <li>
-            <h2>Card Four</h2>
-            <div class="inner">
-              <p>Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
-            </div>
-          </li>
-          <li>
-            <h2>Card Five</h2>
-            <div class="inner">
-              <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-            </div>
-          </li>
+          
 
         </ul>
       </article>
